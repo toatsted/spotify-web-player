@@ -4,19 +4,9 @@
   <meta charset="UTF-8">
   <title></title>
   <script src="https://sdk.scdn.co/spotify-player.js"></script>
-  <script>
-    window.onSpotifyWebPlaybackSDKReady = () => {
-      const token = 'BQAB8nul8PZxFBBBDxTCpb8WcHoHHysaN0cbYc6OlDXvRT3pzLpCH4HuWdgm2vRrPsjhfuD0R6hW8Eachi9DSUXisl5sP194kaRzF8ubdnnDqNRIDtcBiASxm3tptJxHH_yJp39m2Y3Hvbc23K7-wIVdP85YIKk5fdvmhw';
-      player = new Spotify.Player({
-        name: 'spotify-web-player',
-        getOAuthToken: cb => { cb(token); }
-      });
-      // Connect to the player!
-      player.connect();
-    };
-  </script>
+  <script src="/js/setup.js"></script>
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
-  <link rel="stylesheet" href="./assets/css/style.css">
+  <link rel="stylesheet" href="/css/style.css">
 </head>
 <body>
   <img id="art" src="" alt="">
@@ -35,6 +25,6 @@
     src="https://code.jquery.com/jquery-3.3.1.min.js"
     integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
     crossorigin="anonymous"></script>
-  <script src="./assets/js/listeners.js"></script>
+  <script src="js/listeners.js"></script>
 </body>
 </html>
