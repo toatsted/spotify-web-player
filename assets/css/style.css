@@ -4,6 +4,12 @@ body {
   font-family: sans-serif;
 }
 
+.playerRow {
+  display: block;
+  position: absolute;
+
+}
+
 input[type=range]::-moz-range-thumb {
   box-shadow: 1px 1px 1px #000000, 0px 0px 1px #0d0d0d;
   border: 1px solid #000000;
@@ -12,8 +18,29 @@ input[type=range]::-moz-range-thumb {
   background: #ffffff;
 }
 
+img, h3, h6 {
+  display: inline;
+}
+
+img {
+  width: 100px;
+  height: 100px;
+}
+
+.metadata {
+  display: vertical;
+}
+
+.metadata li {
+  display: inline-block;
+}
+
+input {
+  display: inline;
+}
+
 ul {
-  display: block;
+  display: inline;
   list-style: none;
   padding: 0
 }

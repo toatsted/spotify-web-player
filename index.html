@@ -4,37 +4,35 @@
   <meta charset="UTF-8">
   <title></title>
   <script src="https://sdk.scdn.co/spotify-player.js"></script>
-  <script>
-    window.onSpotifyWebPlaybackSDKReady = () => {
-      const token = 'BQAB8nul8PZxFBBBDxTCpb8WcHoHHysaN0cbYc6OlDXvRT3pzLpCH4HuWdgm2vRrPsjhfuD0R6hW8Eachi9DSUXisl5sP194kaRzF8ubdnnDqNRIDtcBiASxm3tptJxHH_yJp39m2Y3Hvbc23K7-wIVdP85YIKk5fdvmhw';
-      player = new Spotify.Player({
-        name: 'spotify-web-player',
-        getOAuthToken: cb => { cb(token); }
-      });
-      // Connect to the player!
-      player.connect();
-    };
-  </script>
+  <script src="/js/spotify-setup.js"></script>
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
-  <link rel="stylesheet" href="./assets/css/style.css">
+  <link rel="stylesheet" href="/css/style.css">
 </head>
 <body>
-  <img id="art" src="" alt="">
-  <h3 id="name"></h3>
-  <h6 id="artist"></h6>
 
-  <ul>
-    <li><button id="prevtrack"><i class="fas fa-backward"></i></button></li>
-    <li><button id="playpause"><i class="fas fa-play"></i></button></li>
-    <li><button id="nexttrack"><i class="fas fa-forward"></i></button></li>
-  </ul>
-  <input type="range" min="0" max="" value="0"  id="seek">
+  <div class="playerRow">
+    <img id="art" src="https://placehold.it/300" alt="">
+    <ul class="metadata">
+      <li>
+        <h3 id="name">song</h3>
+      </li>
+      <li>
+        <h6 id="artist">artist</h6>
+      </li>
+    </ul>
 
+    <ul>
+      <li><button id="prevtrack"><i class="fas fa-backward"></i></button></li>
+      <li><button id="playpause"><i class="fas fa-play"></i></button></li>
+      <li><button id="nexttrack"><i class="fas fa-forward"></i></button></li>
+    </ul>
+    <input type="range" min="0" max="" value="0"  id="seek">
+ </div>
 
   <script
     src="https://code.jquery.com/jquery-3.3.1.min.js"
     integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
     crossorigin="anonymous"></script>
-  <script src="./assets/js/listeners.js"></script>
+  <script src="/js/listeners.js"></script>
 </body>
 </html>
